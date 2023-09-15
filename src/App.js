@@ -10,9 +10,9 @@ import styles from "./App.module.css";
 
 //ROUTERS
 import {
+  HashRouter,
   createBrowserRouter,
-  RouterProvider,
-  Navigate
+  RouterProvider
 } from 'react-router-dom'
 
 //CUSTOM CONTEXT
@@ -72,7 +72,10 @@ function App() {
   ])
   return (
     <div className={styles.main}>
-    <RouterProvider router={router}/>
+      <HashRouter basename="/">
+        <RouterProvider basename="/buybusy-1" router={router}/>
+      </HashRouter>
+    
     </div>
   );
 }
