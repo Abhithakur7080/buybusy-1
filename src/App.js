@@ -10,7 +10,6 @@ import styles from "./App.module.css";
 
 //ROUTERS
 import {
-  HashRouter,
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
@@ -21,6 +20,9 @@ import Cart from "./Components/Cart/cart";
 import Order from "./Components/order/order";
 
 function App() {
+
+  const isGitHubPages = process.env.NODE_ENV === 'production'; // Check if the app is running on GitHub Pages
+  const basename = isGitHubPages ? '/buybusy-1' : '/';
 
   const router = createBrowserRouter([
     {
@@ -72,9 +74,7 @@ function App() {
   ])
   return (
     <div className={styles.main}>
-      <HashRouter basename="/">
-        <RouterProvider router={router}/>
-      </HashRouter>
+        <RouterProvider router={router} basename={basename}/>
     
     </div>
   );
