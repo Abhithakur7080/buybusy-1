@@ -73,7 +73,7 @@ function App() {
   return (
     <div className={styles.main}>
       <HashRouter basename="/">
-        <RouterProvider basename="/buybusy-1" router={router}/>
+        <RouterProvider router={router}/>
       </HashRouter>
     
     </div>
