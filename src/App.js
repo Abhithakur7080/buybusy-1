@@ -22,12 +22,7 @@ import { Helmet } from 'react-helmet';
 
 function App() {
 
-<<<<<<< HEAD
 
-=======
-  const isGitHubPages = process.env.NODE_ENV === 'production'; // Check if the app is running on GitHub Pages
-  const basename = isGitHubPages ? '/buybusy-1' : '/';
->>>>>>> 145213cf66ac3f7d5924f56ec84235e5a78bb14f
 
   const router = createBrowserRouter([
     {
@@ -79,7 +74,6 @@ function App() {
   ])
   return (
     <div className={styles.main}>
-<<<<<<< HEAD
       <Helmet>
         <meta charSet="utf-8" />
         <title>Busy Buy</title>
@@ -87,10 +81,6 @@ function App() {
       </Helmet>
       <RouterProvider router={router} />
 
-=======
-        <RouterProvider router={router} basename={basename}/>
-    
->>>>>>> 145213cf66ac3f7d5924f56ec84235e5a78bb14f
     </div>
   );
 }
